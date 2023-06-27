@@ -57,7 +57,15 @@ window.onload =()=>{
             let curP = validCrid[i].password;
 
             if ((curN[0] === name || curN[1] === name) && (curP === pass)){
-                location.href ='eye-withness.html'
+                location.href ='eye-withness.html';
+                userName.classList.add('complete');
+                userPass.classList.add('complete');
+                
+                if (userName.classList.contain('warning')===true || userPass.classList.contains('warning')===true){
+                    userName.classList.remove('warning');
+                    userPass.classList.remove('warning');
+                };
+                
             }
             else if ((curN[0] !== name || curN[1] !== name) || (curP !== pass)){
                 if (curN !== name && curP === pass){
