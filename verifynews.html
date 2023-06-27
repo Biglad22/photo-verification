@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News verification</title>
+    <link href="assets/css/uicons-regular-rounded.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="verifynews.css"/>
+</head>
+<body class="px-3 px-sm-0 m-0">
+    <main class="container mx-auto row row-cols-1 p-0 justify-content-center">
+        <nav class="py-3 rounded-bottom-4 col p-0 m-0">
+            <div class="row row-cols-2 m-0 p-0 rounded-bottom-4 align-items-center justify-content-end">
+                <div class="nav-links-container d-md-flex col-auto row-cols-1 row-cols-md-auto  m-0 p-3 p-md-0  pe-md-5 align-items-center justify-content-between gap-5 rounded-3 rounded-md-0 ">
+                    <div class="nav-links col">
+                        <ul class="d-md-flex row-cols-auto m-0 p-0 gap-2 align-items-center justify-content-md-end">
+                            <li class="col p-0 m-0">
+                                <a href="index.html" class="py-3 px-5 rounded-3 nav-link">home</a>
+                            </li>
+                            <li class="col p-0 m-0">
+                                <a href="news.html" class="py-3 px-5 rounded-3 nav-link">news</a>
+                            </li>
+                            <li class="col p-0 m-0">
+                                <a href="login.html" class="py-3 px-5 rounded-3 nav-link">eye withness</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-buttons py-4 col-auto m-0 p-0">
+                        <a href="" class="py-3 px-5 rounded-3 full-button">verify news</a>
+                    </div>
+                </div>
+                <div class="menu-buttons d-block d-md-none col-auto m-0 p-3">
+                    <span class="fi-rr-menu-burger p-5"></span>
+                    <span class="fi-rr-cross p-5" hidden></span>
+                </div>
+            </div>
+        </nav> 
+        <section class="upload-section">
+            <div class="warning p-4 m-4">
+                <h6>
+                    you can't add anymore images
+                </h6>
+            </div>
+            <div class="upload">
+                <form class="row row-cols-1 p-0 m-0 gap-5">
+                    <div class="drop-area col m-0 p-0 rounded-4">
+                        <div class="input-img-container">
+                            <label for="file-input" class="file-input-label text-center">choose or drop picture</label>
+                            <input type="file" name="file-input" id="file-input" multiple hidden>
+                        </div>
+                    </div>
+                    <div class="news-info col row row-cols-1 p-0 m-0 gap-4">
+                        <label for="news-title" class="col p-0 m-0">enter news headline
+                            <br/>
+                            <input type="text" name="news-title" class="rounded-2 w-100 w-sm-50 p-3 mt-3" id="news-title"/>
+                        </label>
+                        <div class="news-content col p-0 m-0">
+                            <label for="news-text" class="censure notice mb-3">
+                                your text includes censured words
+                            </label>
+                            <div class="text-backdrop col row p-0 m-0 rounded-4 align-items-end">
+                                <textarea name="news-text" id="news-text" class="col p-3 m-0 rounded-4" col='50' row="4"></textarea>
+                                <div id="texta-body" class="p-0 m-0">
+                                    <div class="texta-body p-3  m-0 rounded-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-4 col row m-0 p-0 justify-content-between gap-3">
+                        <button class="py-3 px-5 col-auto rounded-3 full-button submit-button" type="button" disabled>verify news</button>
+                        <button class="py-3 px-5 col-auto rounded-3 outlined-button reset-button"  type="reset">Reset</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+        <section class='verified-news w-100 h-100 row row-cols-1 m-0 p-0 gap-4' hidden>
+            <div class="col p-0 m-0">
+                <div class="row p-0 m-0 gap-3 align-items-center">
+                    <div class="verified-sign col-auto p-0 m-0">
+                        <img src="assets\vectorr.png" alt=""/>
+                    </div>
+                    <div class="col p-0 m-0">
+                        <h6>
+                            news verified
+                        </h6>
+                        <div class="rating row gap-4 align-items-center">
+                            <div class="progress-bar p-1 m-0 mt-3 rounded-2 col">
+                                <div class="inner-bar p-0 m-0 rounded-2 row justify-content-center">95%</div>
+                            </div>
+                            <h6 class="col m-0 p-0">
+                                Satisfactory !!
+                            </h6>
+                        </div>
+                        
+                    </div>  
+                </div>
+            </div>
+            <div class="verified-title col p-0 m-0 mb-4"></div>
+            <div class="v-n-info col m-0 p-5 rounded-4">
+                <div class="verified-img p-0 m-0"></div>
+                <div class="verified-news-content p-0 m-0 rounded-4"></div>
+                <div class="other-verified-img p-0 m-0"></div>
+            </div>
+        </section>
+        <div class="loading-anime rounded-circle" hidden></div>
+    </main>
+    <script src="verifynews.js"></script>
+</body>
+</html>
