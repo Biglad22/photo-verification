@@ -38,40 +38,40 @@ a, li, ul{
 }
 
 HTML{
-    font-size:62.5%;
-}
-body{
-    font-size:1rem;
+    font-size:calc( 1vmin + 5px);
 }
 
 
+::-webkit-scrollbar{
+    display: none;
+}
 /*text-size*/
 h1{
-    font-size:6.68rem;
+    font-size:4.39rem;
     text-transform:capitalize;
     margin:0;
 }
 
 h2{
-    font-size:5.34rem;
+    font-size:3.95rem;
     text-transform:capitalize;
     margin:0;
 }
 
 h3{
-    font-size:4.27rem;
+    font-size:3.51rem;
     text-transform:capitalize;
     margin:0;
 }
 
 h4{
-    font-size:3.42rem;
+    font-size:3.07rem;
     text-transform:capitalize;
     margin:0;
 }
 
 h5{
-    font-size:2.73rem;
+    font-size:2.63rem;
     text-transform:capitalize;
     margin:0;
 }
@@ -239,10 +239,13 @@ nav > div{
     text-overflow:ellipsis;
 }
 .card-text p{
-    line-height:2.5rem;
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
 }
 
 .card-text h6{
